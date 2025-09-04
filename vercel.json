@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "builds": [
+    { "src": "api/fashion-advice.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/fashion-advice", "dest": "api/fashion-advice.js" }
+  ]
 }
+
